@@ -1,1 +1,1 @@
-# talesmith-landing-page
+# Landing Page for TaleSmith
