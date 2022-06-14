@@ -11,23 +11,41 @@
   <body>
     <div class="keyart" id="parallax">
       <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
-      <!-- 00.0 -->
+      <!-- Clouds -->
       <div class="keyart_layer parallax" id="keyart-5" data-speed="5">
-        <h1>TaleSmith</h1>
+        <div class="title-container">
+          <h1>TaleSmith</h1>
+          <p>
+            An all-in-one Tabletop RPGs companion software for Gamemasters to
+            enhance immersion at the table.
+          </p>
+        </div>
       </div>
-      <!-- 12.5 -->
+      <!-- Title -->
       <div class="keyart_layer parallax" id="keyart-1" data-speed="11"></div>
-      <!-- 25.0 -->
+      <!-- Lake -->
       <div class="keyart_layer parallax" id="keyart-2" data-speed="26"></div>
-      <!-- 50.0 -->
+      <!-- Clouds -->
       <div class="keyart_layer parallax" id="keyart-3" data-speed="36">
         <img src="./assets/img/layer_island_alone.png" alt="" />
       </div>
-      <!-- 62.5 -->
+      <!-- Island -->
       <div class="keyart_layer" id="keyart-4" data-speed="100"></div>
-      <!-- 100. -->
+      <!-- Forest. -->
+      <div class="keyart_layer parallax" id="keyart-6" data-speed="5">
+        <div class="discover-container">
+          <button class="button-explore" onclick="$">
+            <a href="#content"><span class="button-text">Explore</span></a>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="content"></div>
+    <div id="content" class="content"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="./script/index.js"></script>
   </body>
 </html>

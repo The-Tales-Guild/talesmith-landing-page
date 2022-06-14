@@ -16,6 +16,100 @@ $baseurl: "../";
     url($baseurl + "/assets/fonts/TrajanPro-Bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-BlackItalic.woff2")
+      format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-Black.woff2") format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-BoldItalic.woff2")
+      format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-Bold.woff2") format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-LightItalic.woff2")
+      format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-Italic.woff2") format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-Light.woff2") format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-Regular.woff2") format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-SemiBoldItalic.woff2")
+      format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bookmania";
+  src: url($baseurl + "/assets/fonts/Bookmania-SemiBold.woff2") format("woff2"),
+    url($baseurl + "/assets/fonts/Bookmania-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);
@@ -39,6 +133,15 @@ $baseurl: "../";
 
 * {
   box-sizing: border-box;
+  font-family: "Bookmania", sans-serif;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,17 +149,64 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: "Trajan Pro Bold", Arial, Helvetica, sans-serif;
-  font-size: 12rem;
-  text-align: center;
-  opacity: 0.65;
-  color: black;
+.title-container {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+
+  p {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: -3vw;
+    text-align: center;
+    opacity: 0.65;
+  }
+
+  h1 {
+    font-family: "Trajan Pro Bold", Arial, Helvetica, sans-serif;
+    font-size: 14vw;
+    text-align: center;
+    opacity: 0.65;
+    color: black;
+    margin: 4% 0 0 0;
+  }
 }
 
-.keyart,
-.keyart_layer {
-  height: 100vh;
+.discover-container {
+  font-size: 1rem;
+  line-height: 1.5;
+  position: absolute;
+  width: 100%;
+  bottom: 23%;
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: 0.5rem 3rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: rgba($color: #000000, $alpha: 0.3);
+    color: rgb(173, 173, 173);
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2rem;
+
+    &:hover {
+      background: rgba($color: #7e8081, $alpha: 0.3);
+      color: black;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      padding: 0;
+    }
+  }
 }
 
 #parallax {
@@ -66,6 +216,7 @@ h1 {
 .keyart {
   position: relative;
   z-index: 10;
+  height: 100vh;
 }
 
 .keyart_layer {
@@ -73,19 +224,24 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  height: 100vh;
   position: absolute;
 }
+
 .keyart_layer.parallax {
   position: fixed;
 }
+
 #keyart-0 {
   background-image: url($baseurl + "assets/img/layer_sky.png");
   background-color: #15151d;
 }
+
 #keyart-1 {
   background-image: url($baseurl + "assets/img/layer_lake.png");
   background-position: bottom center;
 }
+
 #keyart-2 {
   background-image: url($baseurl + "assets/img/layer_cloud.png");
   background-size: 90%;
@@ -97,19 +253,17 @@ h1 {
 #keyart-3 {
   img {
     position: absolute;
-    width: 19%;
-    left: 25%;
-    top: 30%;
+    width: 15%;
+    right: 25%;
+    top: 41%;
     animation: float 6s ease-in-out infinite;
+    cursor: pointer;
   }
 }
+
 #keyart-4 {
   background-image: url($baseurl + "assets/img/layer_tree.png");
   background-position: bottom center;
-}
-#keyart-scrim {
-  background-color: #15151d;
-  opacity: 0;
 }
 
 .content {
@@ -119,35 +273,4 @@ h1 {
   width: 100%;
   background-color: #15151d;
   z-index: 1000;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  #keyart-0 {
-    background-image: url($baseurl + "images/parallax/parallax0@2x.png");
-    background-color: #ffaf1b;
-  }
-  #keyart-1 {
-    background-image: url($baseurl + "images/parallax/parallax1@2x.png");
-  }
-  #keyart-2 {
-    background-image: url($baseurl + "images/parallax/parallax2@2x.png");
-  }
-  #keyart-3 {
-    background-image: url($baseurl + "images/parallax/parallax3@2x.png");
-  }
-  #keyart-4 {
-    background-image: url($baseurl + "images/parallax/parallax4@2x.png");
-  }
-  #keyart-5 {
-    background-image: url($baseurl + "images/parallax/parallax5@2x.png");
-  }
-  #keyart-6 {
-    background-image: url($baseurl + "images/parallax/parallax6@2x.png");
-  }
-  #keyart-7 {
-    background-image: url($baseurl + "images/parallax/parallax7@2x.png");
-  }
-  #keyart-8 {
-    background-image: url($baseurl + "images/parallax/parallax8@2x.png");
-  }
 }

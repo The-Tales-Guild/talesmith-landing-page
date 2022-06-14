@@ -1,10 +1,22 @@
+var isExploreVisible = true;
+
+$(window).scroll(function () {
+  var scrollTop = $(this).scrollTop();
+
+  $(".button-explore").css({
+    opacity: function () {
+      var elementHeight = $(this).height();
+      return (elementHeight - scrollTop) / elementHeight;
+    },
+  });
+});
+
 function castParallax() {
   var opThresh = 350;
   var opFactor = 750;
 
   window.addEventListener("scroll", function (event) {
     var top = this.pageYOffset;
-
     var layers = document.getElementsByClassName("parallax");
     var layer, speed, yPos;
     for (var i = 0; i < layers.length; i++) {
