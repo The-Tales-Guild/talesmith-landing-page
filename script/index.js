@@ -3,7 +3,7 @@ var isExploreVisible = true;
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
 
-  $(".button-explore").css({
+  $(".fancy").css({
     opacity: function () {
       var elementHeight = $(this).height();
       return (elementHeight - scrollTop) / elementHeight;
