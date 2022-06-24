@@ -10,28 +10,25 @@
   </head>
   <body>
     <div class="keyart" id="parallax">
-      <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
       <!-- Clouds -->
+      <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
+      <!-- Title -->
       <div class="keyart_layer parallax" id="keyart-5" data-speed="5">
         <div class="title-container">
-          <h1>TaleSmith</h1>
-          <p>
-            An all-in-one Tabletop RPGs companion software for Gamemasters to
-            enhance immersion at the table.
-          </p>
+          <img src="./assets/img/logos/MainLogo.png" alt="MainLogo" />
         </div>
       </div>
-      <!-- Title -->
-      <div class="keyart_layer parallax" id="keyart-1" data-speed="11"></div>
       <!-- Lake -->
-      <div class="keyart_layer parallax" id="keyart-2" data-speed="26"></div>
+      <div class="keyart_layer parallax" id="keyart-1" data-speed="11"></div>
       <!-- Clouds -->
-      <div class="keyart_layer parallax" id="keyart-3" data-speed="36">
-        <img src="./assets/img/layer_island_alone.png" alt="" />
-      </div>
+      <div class="keyart_layer parallax" id="keyart-2" data-speed="26"></div>
       <!-- Island -->
+      <div class="keyart_layer parallax" id="keyart-3" data-speed="36">
+        <img src="./assets/img/layers/layer_island_alone.png" alt="" />
+      </div>
+      <!-- Forest -->
       <div class="keyart_layer" id="keyart-4" data-speed="100"></div>
-      <!-- Forest. -->
+      <!-- Explore -->
       <div class="keyart_layer parallax" id="keyart-6" data-speed="5">
         <div class="discover-container">
           <a class="fancy" href="#content">
@@ -43,12 +40,31 @@
         </div>
       </div>
     </div>
-    <div id="content" class="content"></div>
+    <div id="content" class="content">
+      <div class="content-restrict">
+        <div class="slogan-container">
+          <div class="dice-container">
+            <img src="./assets/img/icons/d20.png" alt="D20" />
+          </div>
+          <div class="slogan-text-container">
+            <h3 class="slogan-top">Embark on an</h3>
+            <h2 class="slogan-central">Immersive</h2>
+            <h3 class="slogan-bottom">Adventure</h3>
+          </div>
+          <div class="dice-container">
+            <img src="./assets/img/icons/d20.png" alt="D20" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="./script/gsap.min.js"></script>
+    <script src="./script/ScrollToPlugin.min.js"></script>
     <script src="./script/index.js"></script>
   </body>
 </html>

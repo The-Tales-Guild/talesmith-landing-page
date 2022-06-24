@@ -1,5 +1,10 @@
-var isExploreVisible = true;
+//Explore button click event
+$(".fancy").click(function (e) {
+  e.preventDefault();
+  gsap.to(window, { duration: 0.15, scrollTo: "#content" });
+});
 
+//Parallax
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
 
@@ -16,7 +21,7 @@ function castParallax() {
   var opFactor = 750;
 
   window.addEventListener("scroll", function (event) {
-    var top = this.pageYOffset;
+    var top = this.scrollY;
     var layers = document.getElementsByClassName("parallax");
     var layer, speed, yPos;
     for (var i = 0; i < layers.length; i++) {

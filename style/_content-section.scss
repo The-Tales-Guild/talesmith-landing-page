@@ -1,0 +1,70 @@
+//------------------------------//
+/*CONTENT SECTION*/
+//------------------------------//
+
+.content {
+  position: absolute;
+  top: 99vh;
+  height: 2000px;
+  width: 100%;
+  background-color: #15151d;
+  z-index: 1000;
+
+  .content-restrict {
+    margin: auto;
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+.slogan-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+
+  .dice-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+
+    img {
+      width: 100%;
+      opacity: 0.8;
+    }
+  }
+
+  .slogan-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trajan Pro Bold", sans-serif;
+    text-transform: lowercase;
+    margin: 0 1rem;
+
+    .slogan-top {
+      font-size: 2rem;
+      margin: 0;
+      color: $grey;
+    }
+
+    .slogan-central {
+      font-size: 3rem;
+      margin: 0;
+      color: $red;
+    }
+
+    .slogan-bottom {
+      font-size: 2rem;
+      margin: 0;
+      color: $grey;
+    }
+  }
+}
