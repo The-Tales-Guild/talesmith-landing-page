@@ -4,6 +4,21 @@ $(".fancy").click(function (e) {
   gsap.to(window, { duration: 0.15, scrollTo: "#content" });
 });
 
+//Features buttons click event
+$(".feature-container").click(function (e) {
+  e.preventDefault();
+  let cat = this.id.replace("-feature", "");
+  if ($("#" + cat + "-description").hasClass("selected")) {
+    $("#" + cat + "-feature").removeClass("current");
+    $("#" + cat + "-description").removeClass("selected");
+    $("#" + cat + "-description p").fadeOut("0.8s");
+  } else {
+    $("#" + cat + "-feature").addClass("current");
+    $("#" + cat + "-description").addClass("selected");
+    $("#" + cat + "-description p").fadeIn("0.8s");
+  }
+});
+
 //Parallax
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();

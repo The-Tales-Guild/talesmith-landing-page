@@ -204,38 +204,25 @@ section.features-section {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    z-index: 100;
 
-    &::after,
-    &::before {
-      top: 100%;
-      left: 50%;
-      border: solid transparent;
+    &::after {
       content: "";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-top-color: $black;
+      border: solid $grey;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      opacity: 0;
       transition: all 0.3s ease;
+      margin-top: 0;
     }
 
-    &:hover::after {
-      border-color: rgba(255, 0, 0, 0);
-      border-top-color: $black;
-      border-width: 10px;
-      margin-left: -10px;
-    }
-
-    &:hover::before {
-      border-color: rgba(255, 255, 255, 0);
-      border-top-color: $grey;
-      border-width: 12px;
-      margin-left: -12px;
-    }
-
-    &:hover {
-      margin: 2rem 1rem 3rem 1rem;
-      border-bottom: 2px solid $grey;
+    &:hover::after,
+    &.current::after {
+      opacity: 1;
+      margin: 0.5rem 0;
     }
 
     img {
@@ -258,15 +245,62 @@ section.features-section {
 
   .feature-description {
     width: 90%;
-    border: 2px solid $grey;
+    height: 0px;
+    border: 1px solid $grey;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 0.5rem;
+    z-index: 0;
+    transition: 0.8s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      background: $black;
+      z-index: -1;
+      transition: 0.8s;
+      content: "";
+    }
+
+    &::before {
+      height: 150px;
+      width: 90%;
+    }
+
+    &::after {
+      width: 100.5%;
+      height: 120px;
+    }
+
     p {
+      height: auto;
       color: $grey;
       font-weight: 300;
+      overflow: hidden;
 
       strong {
         color: $yellow;
         font-weight: 500;
       }
+    }
+  }
+
+  .selected {
+    height: 150px;
+
+    p {
+      height: auto;
+    }
+
+    &::before {
+      width: 0px;
+    }
+
+    &::after {
+      height: 0px;
     }
   }
 }
