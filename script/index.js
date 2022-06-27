@@ -4,6 +4,58 @@ $(".fancy").click(function (e) {
   gsap.to(window, { duration: 0.15, scrollTo: "#content" });
 });
 
+//Next button click event
+const PAGE_TOTAL = 3;
+let currentPage = 0;
+
+$(".next").click(function (e) {
+  e.preventDefault();
+  for (let i = 0; i < PAGE_TOTAL; i++) {
+    $(".page-" + i).css(
+      "transform",
+      "translateX(" + (i * 100 - ((currentPage + 1) % PAGE_TOTAL) * 200) + "%)"
+    );
+    $(".slogan-" + i).css(
+      "transform",
+      "translateX(" + (i * 100 - ((currentPage + 1) % PAGE_TOTAL) * 200) + "%)"
+    );
+    $("#caroussel-description-page-" + (currentPage % PAGE_TOTAL)).toggleClass(
+      "current"
+    );
+    $(
+      "#caroussel-description-page-" + ((currentPage + 1) % PAGE_TOTAL)
+    ).toggleClass("current");
+  }
+  currentPage = (currentPage + 1) % 3;
+});
+
+//Previous button click event
+$(".previous").click(function (e) {
+  e.preventDefault();
+  for (let i = 0; i < PAGE_TOTAL; i++) {
+    $(".page-" + i).css(
+      "transform",
+      "translateX(" +
+        -(-i * 100 + ((currentPage + PAGE_TOTAL - 1) % PAGE_TOTAL) * 200) +
+        "%)"
+    );
+    $(".slogan-" + i).css(
+      "transform",
+      "translateX(" +
+        -(-i * 100 + ((currentPage + PAGE_TOTAL - 1) % PAGE_TOTAL) * 200) +
+        "%)"
+    );
+    $("#caroussel-description-page-" + (currentPage % PAGE_TOTAL)).toggleClass(
+      "current"
+    );
+    $(
+      "#caroussel-description-page-" +
+        ((currentPage + PAGE_TOTAL - 1) % PAGE_TOTAL)
+    ).toggleClass("current");
+  }
+  currentPage = (currentPage + PAGE_TOTAL - 1) % PAGE_TOTAL;
+});
+
 //Features buttons click event
 let lastOpenedCat = "script";
 

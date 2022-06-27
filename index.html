@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="viewport" content="width=device-height" />
+    <!--<meta name="viewport" content="width=device-height" />-->
     <link rel="stylesheet" href="style/index.css" />
     <title>TaleSmith</title>
   </head>
@@ -48,7 +48,13 @@
           </div>
           <div class="slogan-text-container">
             <h3 class="slogan-top">Embark on an</h3>
-            <h2 class="slogan-central">Immersive</h2>
+            <div class="slogan-box">
+              <div class="slogan-flex">
+                <h2 class="slogan-central slogan-0">Immersive</h2>
+                <h2 class="slogan-central slogan-1">Dwelling</h2>
+                <h2 class="slogan-central slogan-2">Shared</h2>
+              </div>
+            </div>
             <h3 class="slogan-bottom">Adventure</h3>
           </div>
           <div class="dice-container">
@@ -61,20 +67,49 @@
             <p>Previous</p>
           </div>
           <div class="caroussel-description-content">
-            <p class="caroussel-description-text">
-              <i>TaleSmith</i> emerged from a desire to provide greater
-              <strong>immersion</strong> during face-to-face roleplaying
-              sessions. This software intends to gather on a single screen the
-              enhanced <strong>script</strong> of the adventure, an audio
-              manager to control <strong>music</strong> and
-              <strong>sound effects</strong> played during the session and an
-              intuitive system for broadcasting <strong>visuals</strong> and
-              videos to a separate display.
-            </p>
+            <div class="caroussel-description-box">
+              <div class="caroussel-description-flex">
+                <p class="caroussel-description-text page-0">
+                  <i>TaleSmith</i> emerged from a desire to provide greater
+                  <strong>immersion</strong> during face-to-face roleplaying
+                  sessions. This software intends to gather on a single screen
+                  the enhanced <strong>script</strong> of the adventure, an
+                  audio manager to control <strong>music</strong> and
+                  <strong>sound effects</strong> played during the session and
+                  an intuitive system for broadcasting
+                  <strong>visuals</strong> and videos to a separate display.
+                </p>
+                <p class="caroussel-description-text page-1">
+                  It also integrates the <strong>SRD</strong> of the fifth
+                  edition and provides specific features for this system such as
+                  <strong>quick rules access</strong>,
+                  <strong>reference cards</strong> for spells and items, and an
+                  <strong>initiative tracker</strong>. Other features will be
+                  added along the way such as monsters’ hit points tracker, a
+                  markdown notepad for the gamemaster and much more !
+                </p>
+                <p class="caroussel-description-text page-2">
+                  Once upon a time, there was a group of
+                  <strong>four nerdy-ass engineers</strong> that shared the same
+                  passion for roleplaying games as for programming. One day,
+                  during a game session around the table, while fighting a huge
+                  army of gobelins, one of them realized something.
+                  <i
+                    >“What if we added <strong>battle music</strong>,
+                    <strong>sound effects</strong>, and a
+                    <strong>visual</strong> of the battle scene ?”</i
+                  >
+                  And from this day, our party of four adventurers set forth
+                  upon the task of creating a <strong>tool</strong> that would
+                  help gamemasters to reach a top-notch
+                  <strong>immersion</strong>. There was created The Tales Guild.
+                </p>
+              </div>
+            </div>
             <ul class="caroussel-points-container">
-              <li id="caroussel-description-page-1" class="current"></li>
+              <li id="caroussel-description-page-0" class="current"></li>
+              <li id="caroussel-description-page-1"></li>
               <li id="caroussel-description-page-2"></li>
-              <li id="caroussel-description-page-3"></li>
             </ul>
           </div>
           <div class="move-button-container next">
@@ -176,8 +211,69 @@
           </div>
         </section>
       </div>
+      <aside>
+        <div class="content-restrict">
+          <section class="support-section">
+            <h3>We need your help</h3>
+            <div class="support-description-container">
+              <!--TODO: Add correct links x2-->
+              <p>
+                And now, we need your help to make this project happen ! In
+                order to fully grasp the needs of gamemasters and players from
+                all around the world, we would love to hear from your own
+                experience. If you want to support us, please consider taking
+                5min of your time to answer
+                <a href="">this survey</a>.
+              </p>
+              <p>
+                You can also join <a href="">our Discord server</a> to keep up
+                with the development of the software and interact directly with
+                the team!
+              </p>
+              <p>
+                We thank you ever so much for your interest in the project. May
+                the dice be with you !
+              </p>
+              <img src="./assets/img/logos/signature-en.png" alt="Signature" />
+            </div>
+            <div class="support-buttons-container">
+              <a href="">Survey</a>
+              <a class="discord close" href="">Join</a>
+            </div>
+          </section>
+        </div>
+      </aside>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-logo-container">
+            <h5>TaleSmith</h5>
+            <h6>by The Tales Guild</h6>
+          </div>
+          <!--TODO: Add all links-->
+          <div class="socials-container">
+            <div class="socials-mail">
+              <a class="mail" href="mailto:contact@thetalesguild.com"></a>
+              <p>contact@thetalesguild.com</p>
+            </div>
+            <a class="discord" href=""></a>
+            <a
+              class="instagram"
+              href="https://www.instagram.com/thetalesguild/"
+            ></a>
+            <a
+              class="linkedin"
+              href="https://www.linkedin.com/company/thetalesguild"
+            ></a>
+          </div>
+          <div class="copyright-container">
+            <p>
+              TaleSmith © Copyright 2022, The Tales Guild. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
-
+    <!-- TODO: Add email capture form -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
