@@ -5,17 +5,35 @@ $(".fancy").click(function (e) {
 });
 
 //Features buttons click event
+let lastOpenedCat = "script";
+
 $(".feature-container").click(function (e) {
   e.preventDefault();
   let cat = this.id.replace("-feature", "");
-  if ($("#" + cat + "-description").hasClass("selected")) {
-    $("#" + cat + "-feature").removeClass("current");
-    $("#" + cat + "-description").removeClass("selected");
-    $("#" + cat + "-description p").fadeOut("0.8s");
+  if (cat == lastOpenedCat) {
+    if ($("#" + cat + "-description").hasClass("selected")) {
+      $("#" + cat + "-feature").removeClass("current");
+      $("#" + cat + "-description").removeClass("selected");
+      $("#" + cat + "-description p").fadeOut("0.8s");
+    } else {
+      $("#" + cat + "-feature").addClass("current");
+      $("#" + cat + "-description").addClass("selected");
+      $("#" + cat + "-description p").fadeIn("0.8s");
+    }
   } else {
-    $("#" + cat + "-feature").addClass("current");
-    $("#" + cat + "-description").addClass("selected");
-    $("#" + cat + "-description p").fadeIn("0.8s");
+    if ($("#" + cat + "-description").hasClass("selected")) {
+      $("#" + cat + "-feature").removeClass("current");
+      $("#" + cat + "-description").removeClass("selected");
+      $("#" + cat + "-description p").fadeOut("0.8s");
+    } else {
+      $("#" + lastOpenedCat + "-feature").removeClass("current");
+      $("#" + lastOpenedCat + "-description").removeClass("selected");
+      $("#" + lastOpenedCat + "-description p").fadeOut("0.8s");
+      $("#" + cat + "-feature").addClass("current");
+      $("#" + cat + "-description").addClass("selected");
+      $("#" + cat + "-description p").fadeIn("0.8s");
+      lastOpenedCat = cat;
+    }
   }
 });
 

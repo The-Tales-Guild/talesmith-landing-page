@@ -800,6 +800,7 @@ section.features-section .feature-description p strong {
 
 section.features-section .selected {
   height: 150px;
+  z-index: 5;
 }
 
 section.features-section .selected p {
