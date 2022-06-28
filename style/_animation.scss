@@ -19,6 +19,16 @@
   }
 }
 
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+
 @mixin magic-border($width, $color, $duration, $direction) {
   position: relative;
   &:before {

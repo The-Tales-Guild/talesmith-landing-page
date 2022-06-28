@@ -12,7 +12,7 @@
 
   .content-restrict {
     margin: auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     width: 100%;
     max-width: 600px;
   }
@@ -26,6 +26,11 @@
   align-items: center;
   width: 80%;
 
+  @include media("<tablet") {
+    width: 100%;
+    flex-direction: column;
+  }
+
   .dice-container {
     height: 100%;
     display: flex;
@@ -33,6 +38,20 @@
     justify-content: center;
     align-items: center;
     width: 10%;
+
+    @include media("<tablet") {
+      width: 7%;
+    }
+
+    @include media("<tablet") {
+      &.dice-left {
+        margin: 0 0 1rem 0;
+      }
+
+      &.dice-right {
+        margin: 1rem 0 0 0;
+      }
+    }
 
     img {
       width: 100%;
@@ -51,11 +70,20 @@
     margin: 0 0rem;
     width: 70%;
 
+    @include media("<tablet") {
+      width: 90%;
+    }
+
     .slogan-top {
       font-size: 2rem;
       margin: 0;
       color: $grey;
       margin-bottom: -0.5rem;
+      text-align: center;
+
+      @include media("<tablet") {
+        font-size: 1.5rem;
+      }
     }
 
     .slogan-box {
@@ -77,6 +105,10 @@
           text-align: center;
           transition: all 0.8s ease;
 
+          @include media("<tablet") {
+            font-size: 3rem;
+          }
+
           &.slogan-0 {
             transform: translateX(0);
           }
@@ -97,6 +129,10 @@
       margin: 0;
       color: $grey;
       margin-top: -0.5rem;
+
+      @include media("<tablet") {
+        font-size: 1.9rem;
+      }
     }
   }
 }
@@ -110,6 +146,10 @@ section.caroussel-description {
   margin: 2rem 0 0 0;
   position: relative;
 
+  @include media("<tablet") {
+    margin: 0;
+  }
+
   .move-button-container {
     position: absolute;
     right: -7rem;
@@ -120,6 +160,10 @@ section.caroussel-description {
     align-items: center;
     cursor: pointer;
     overflow: hidden;
+
+    @include media("<=desktop") {
+      display: none;
+    }
 
     &.previous {
       justify-content: flex-start;
@@ -207,24 +251,53 @@ section.caroussel-description {
       }
     }
 
-    ul {
+    .caroussel-points-box {
+      width: 100%;
       display: flex;
-      justify-content: space-evenly;
-      width: 20%;
-      list-style: none;
-      padding: 0;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
-      li {
-        background-color: $grey;
-        width: 0.6rem;
-        height: 0.6rem;
-        border-radius: 0.3rem;
-        margin: 0;
-        opacity: 0.3;
-        transition: all 0.3s ease;
+      .move-button-container {
+        display: none;
 
-        &.current {
-          opacity: 1 !important;
+        @include media("<=desktop") {
+          display: flex;
+          position: initial;
+          position: absolute;
+          top: 0;
+
+          &.previous {
+            margin: 0 0 0 1rem;
+            left: 0;
+          }
+
+          &.next {
+            margin: 0 1rem 0 0;
+            right: 0;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 20%;
+        list-style: none;
+        padding: 0;
+
+        li {
+          background-color: $grey;
+          width: 0.6rem;
+          height: 0.6rem;
+          border-radius: 0.3rem;
+          margin: 0;
+          opacity: 0.3;
+          transition: all 0.3s ease;
+
+          &.current {
+            opacity: 1 !important;
+          }
         }
       }
     }
@@ -253,6 +326,14 @@ section.features-section {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+
+  @include media("<tablet") {
+    @for $i from 1 through 12 {
+      .order-#{$i} {
+        order: $i;
+      }
+    }
+  }
 
   .feature-container {
     flex: 1 0 44%;
@@ -389,6 +470,11 @@ aside {
       margin: 0 0 1rem 0;
       color: $grey;
       font-size: 3rem;
+      text-align: center;
+
+      @include media("<tablet") {
+        font-size: 2rem;
+      }
     }
 
     .support-description-container {
@@ -428,6 +514,10 @@ aside {
         align-self: flex-end;
         width: 37%;
         margin: 1rem 0 0 0;
+
+        @include media("<tablet") {
+          width: 63%;
+        }
       }
     }
 
@@ -435,6 +525,8 @@ aside {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      flex-wrap: wrap;
+      row-gap: 1rem;
       align-items: center;
       width: 100%;
       margin: 2rem 0 1rem 0;
@@ -489,7 +581,7 @@ footer {
   background-image: url(../assets/img/layers/footer.png);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
 
   .footer-container {
     display: flex;
@@ -587,6 +679,7 @@ footer {
         font-weight: lighter;
         margin: 0;
         font-size: 0.8rem;
+        text-align: center;
       }
     }
   }

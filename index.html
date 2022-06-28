@@ -9,6 +9,14 @@
     <title>TaleSmith</title>
   </head>
   <body>
+    <div class="keyart-mobile">
+      <div class="mobile-title-container">
+        <img src="./assets/img/logos/MainLogo.png" alt="MainLogo" />
+      </div>
+      <div class="scroll-arrow-container">
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
     <div class="keyart" id="parallax">
       <!-- Clouds -->
       <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
@@ -43,7 +51,7 @@
     <div id="content" class="content">
       <div class="content-restrict">
         <div class="slogan-container">
-          <div class="dice-container">
+          <div class="dice-container dice-left">
             <img src="./assets/img/icons/d20.png" alt="D20" />
           </div>
           <div class="slogan-text-container">
@@ -57,7 +65,7 @@
             </div>
             <h3 class="slogan-bottom">Adventure</h3>
           </div>
-          <div class="dice-container">
+          <div class="dice-container dice-right">
             <img src="./assets/img/icons/d20.png" alt="D20" />
           </div>
         </div>
@@ -106,11 +114,24 @@
                 </p>
               </div>
             </div>
-            <ul class="caroussel-points-container">
-              <li id="caroussel-description-page-0" class="current"></li>
-              <li id="caroussel-description-page-1"></li>
-              <li id="caroussel-description-page-2"></li>
-            </ul>
+            <div class="caroussel-points-box">
+              <div class="move-button-container previous">
+                <img src="./assets/img/icons/left-arrow.png" alt="LeftArrow" />
+                <p>Previous</p>
+              </div>
+              <ul class="caroussel-points-container">
+                <li id="caroussel-description-page-0" class="current"></li>
+                <li id="caroussel-description-page-1"></li>
+                <li id="caroussel-description-page-2"></li>
+              </ul>
+              <div class="move-button-container next">
+                <p>Next</p>
+                <img
+                  src="./assets/img/icons/right-arrow.png"
+                  alt="RightArrow"
+                />
+              </div>
+            </div>
           </div>
           <div class="move-button-container next">
             <p>Next</p>
@@ -121,18 +142,22 @@
           <img src="./assets/img/icons/divider.png" alt="Divider" />
         </div>
         <section class="features-section">
-          <div id="script-feature" class="feature-container">
+          <div id="script-feature" class="feature-container order-1">
             <img src="./assets/img/icons/book.png" alt="Script" />
             <h4>Enhanced<br />Script</h4>
           </div>
-          <div id="visuals-feature" class="feature-container">
+          <div id="visuals-feature" class="feature-container order-3">
             <img src="./assets/img/icons/picture.png" alt="Artwork" />
             <h4>
               Animated<br />
               Art & Visuals
             </h4>
           </div>
-          <div id="script-description" class="feature-description" hidden>
+          <div
+            id="script-description"
+            class="feature-description order-2"
+            hidden
+          >
             <p hidden>
               An <strong>augmented script</strong> of the adventure containing
               <strong>hypertext links</strong> as well as
@@ -141,7 +166,11 @@
               during the preparation of the game or during the sessions.
             </p>
           </div>
-          <div id="visuals-description" class="feature-description" hidden>
+          <div
+            id="visuals-description"
+            class="feature-description order-4"
+            hidden
+          >
             <p hidden>
               Allows you to broadcast <strong>artworks</strong>,
               <strong>videos</strong>, <strong>animations</strong> on
@@ -150,21 +179,25 @@
               help them better to imagine the scene.
             </p>
           </div>
-          <div id="ambiant-feature" class="feature-container">
+          <div id="ambiant-feature" class="feature-container order-5">
             <img src="./assets/img/icons/music.png" alt="Ambiant Music" />
             <h4>
               Ambiant<br />
               Sounds & Music
             </h4>
           </div>
-          <div id="sfx-feature" class="feature-container">
+          <div id="sfx-feature" class="feature-container order-7">
             <img src="./assets/img/icons/sound.png" alt="Sound Effects" />
             <h4>
               Unique<br />
               Sound Effects
             </h4>
           </div>
-          <div id="ambiant-description" class="feature-description" hidden>
+          <div
+            id="ambiant-description"
+            class="feature-description order-6"
+            hidden
+          >
             <p hidden>
               <strong>Music</strong> and
               <strong>ambient sounds</strong> broadcast with a
@@ -172,7 +205,7 @@
               at different sound levels.
             </p>
           </div>
-          <div id="sfx-description" class="feature-description" hidden>
+          <div id="sfx-description" class="feature-description order-8" hidden>
             <p hidden>
               A sound effects <strong>control table</strong> allowing the
               gamemaster to play <strong>sound effects</strong> when deemed
@@ -180,28 +213,32 @@
               make your players fear a storm!
             </p>
           </div>
-          <div id="notes-feature" class="feature-container">
+          <div id="notes-feature" class="feature-container order-9">
             <img src="./assets/img/icons/notebook.png" alt="Notebook" />
             <h4>
               Built-In<br />
               Notes Editor
             </h4>
           </div>
-          <div id="5e-feature" class="feature-container">
+          <div id="5e-feature" class="feature-container order-11">
             <img src="./assets/img/icons/5E.png" alt="5E" />
             <h4>
               Fully<br />
               5E Compatible
             </h4>
           </div>
-          <div id="notes-description" class="feature-description" hidden>
+          <div
+            id="notes-description"
+            class="feature-description order-10"
+            hidden
+          >
             <p hidden>
               A specially designed notepad to <strong>efficiently</strong> and
               <strong>quickly</strong> take notes of your sessions thanks to
               <strong>Markdown</strong>.
             </p>
           </div>
-          <div id="5e-description" class="feature-description" hidden>
+          <div id="5e-description" class="feature-description order-12" hidden>
             <p hidden>
               Full access to the <strong>SRD</strong> of the
               <strong>5th edition</strong> of the world’s greatest roleplaying
