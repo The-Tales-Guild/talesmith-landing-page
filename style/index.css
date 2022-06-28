@@ -1094,7 +1094,7 @@ section.features-section .feature-container h4 {
   padding: 0;
   color: #cccccc;
   text-transform: lowercase;
-  font-family: "Trajan Pro", sans-serif;
+  font-family: "Trajan Pro Bold", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
@@ -1207,7 +1207,7 @@ aside section.support-section {
 }
 
 aside section.support-section h3 {
-  font-family: "Trajan Pro", sans-serif;
+  font-family: "Trajan Pro Bold", sans-serif;
   font-weight: 600;
   margin: 0 0 1rem 0;
   color: #cccccc;
@@ -1301,7 +1301,7 @@ aside section.support-section .support-buttons-container {
 aside section.support-section .support-buttons-container a {
   background: #254b58;
   border: solid 2px #cccccc;
-  font-family: "Trajan Pro", sans-serif;
+  font-family: "Trajan Pro Bold", sans-serif;
   font-weight: 500;
   text-align: center;
   color: #cccccc;
@@ -1405,7 +1405,7 @@ footer .footer-container .footer-logo-container {
 }
 
 footer .footer-container .footer-logo-container h5 {
-  font-family: "Trajan Pro", sans-serif;
+  font-family: "Trajan Pro Bold", sans-serif;
   font-weight: bold;
   margin: 0;
   font-size: 1.4rem;
