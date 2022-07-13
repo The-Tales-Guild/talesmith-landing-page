@@ -3,6 +3,10 @@ $(".fancy").click(function (e) {
   e.preventDefault();
   gsap.to(window, { duration: 0.15, scrollTo: "#content" });
 });
+$(".scroll-arrow").click(function (e) {
+  e.preventDefault();
+  gsap.to(window, { duration: 0.15, scrollTo: "#content" });
+});
 
 //Next button click event
 const PAGE_TOTAL = 3;
@@ -88,6 +92,23 @@ $(".feature-container").click(function (e) {
     }
   }
 });
+
+//Modal
+var modal = document.getElementById("preview-modal");
+var img = document.getElementById("clickable-zone-preview");
+var modalImg = document.getElementById("talesmith-preview-image");
+var captionText = document.getElementById("caption");
+img.onclick = function () {
+  modal.style.display = "flex";
+};
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close-cross")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
 
 //Parallax
 $(window).scroll(function () {

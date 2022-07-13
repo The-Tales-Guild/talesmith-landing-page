@@ -230,6 +230,7 @@ section.caroussel-description {
           font-weight: 300;
           transition: all 0.8s ease;
           width: 100%;
+          font-size: 1.2rem;
 
           &.page-0 {
             transform: translateX(0);
@@ -491,6 +492,7 @@ aside {
         text-align: justify;
         text-align-last: left;
         margin: 0.5rem 0;
+        font-size: 1.1rem;
 
         a {
           text-decoration: none;
@@ -570,6 +572,77 @@ aside {
   }
 }
 
+section.preview-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 0;
+
+  .preview-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 2rem 0;
+
+    h2 {
+      text-align: center;
+      margin: 0;
+      font-family: "Trajan Pro Bold", sans-serif;
+      color: $grey;
+      font-size: 3rem;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 0;
+      font-family: "Trajan Pro Bold", sans-serif;
+      color: $red;
+      font-size: 1.8rem;
+    }
+  }
+
+  .preview-visuals {
+    width: 60%;
+    margin: auto;
+    position: relative;
+
+    @include media("<tablet") {
+      width: 90%;
+    }
+
+    .clickable-zone {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60%;
+      height: 62%;
+      cursor: pointer;
+    }
+
+    .click-here {
+      position: absolute;
+      width: 30%;
+      top: 12%;
+      left: 10%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .preview-image {
+      width: 100%;
+      margin: 2rem 0 0 0;
+      img {
+        display: block;
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
 footer {
   width: 100%;
   min-height: 300px;
@@ -578,10 +651,21 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-image: url(../assets/img/layers/footer.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+
+  @include media("<=2K") {
+    background-image: url($baseurl + "assets/img/layers/desktop/footer.png");
+  }
+
+  @include media(">2K", "<=4K") {
+    background-image: url($baseurl + "assets/img/layers/2K/footer.png");
+  }
+
+  @include media(">4K") {
+    background-image: url($baseurl + "assets/img/layers/4K/footer.png");
+  }
 
   .footer-container {
     display: flex;
@@ -673,6 +757,8 @@ footer {
       }
     }
     .copyright-container {
+      width: 100%;
+      padding: 0 1rem;
       p {
         color: $grey;
         font-family: "Roboto", sans-serif;
@@ -680,6 +766,10 @@ footer {
         margin: 0;
         font-size: 0.8rem;
         text-align: center;
+
+        span {
+          display: inline-block;
+        }
       }
     }
   }

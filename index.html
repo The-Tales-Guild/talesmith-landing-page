@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Primary Meta Tags -->
-    <title>TaleSmith</title>
-    <meta name="title" content="TaleSmith" />
+    <title>
+      TaleSmith - A Tabletop RPG Companion Software by The Tales Guild
+    </title>
+    <meta
+      name="title"
+      content="TaleSmith - A Tabletop RPG Companion Software by The Tales Guild"
+    />
     <meta
       name="description"
       content="TaleSmith is an all-in-one companion software for tabletop roleplaying games developed by The Tales Guild.  Enhance immersion at your table with our numerous built-in features right at your fingertips."
@@ -14,7 +19,10 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://thetalesguild.com" />
-    <meta property="og:title" content="TaleSmith" />
+    <meta
+      property="og:title"
+      content="TaleSmith - A Tabletop RPG Companion Software by The Tales Guild"
+    />
     <meta
       property="og:description"
       content="TaleSmith is an all-in-one companion software for tabletop roleplaying games developed by The Tales Guild.  Enhance immersion at your table with our numerous built-in features right at your fingertips."
@@ -27,7 +35,10 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://thetalesguild.com" />
-    <meta property="twitter:title" content="TaleSmith" />
+    <meta
+      property="twitter:title"
+      content="TaleSmith - A Tabletop RPG Companion Software by The Tales Guild"
+    />
     <meta
       property="twitter:description"
       content="TaleSmith is an all-in-one companion software for tabletop roleplaying games developed by The Tales Guild.  Enhance immersion at your table with our numerous built-in features right at your fingertips."
@@ -44,13 +55,13 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#b91d47" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#B51F3E" />
     <link rel="stylesheet" href="style/index.css" />
   </head>
   <body>
     <div class="keyart-mobile">
       <div class="mobile-title-container">
-        <img src="./assets/img/logos/MainLogo.png" alt="MainLogo" />
+        <img src="./assets/img/logos/desktop/MainLogo.png" alt="MainLogo" />
       </div>
       <div class="scroll-arrow-container">
         <div class="scroll-arrow"></div>
@@ -62,7 +73,7 @@
       <!-- Title -->
       <div class="keyart_layer parallax" id="keyart-5" data-speed="5">
         <div class="title-container">
-          <img src="./assets/img/logos/MainLogo.png" alt="MainLogo" />
+          <img src="./assets/img/logos/desktop/MainLogo.png" alt="MainLogo" />
         </div>
       </div>
       <!-- Lake -->
@@ -71,7 +82,14 @@
       <div class="keyart_layer parallax" id="keyart-2" data-speed="26"></div>
       <!-- Island -->
       <div class="keyart_layer parallax" id="keyart-3" data-speed="36">
-        <img src="./assets/img/layers/layer_island_alone.png" alt="" />
+        <img
+          src="./assets/img/layers/desktop/layer_island_alone.png"
+          alt=""
+          srcset="
+            ./assets/img/layers/desktop/layer_island_alone.png 500w,
+            ./assets/img/layers/2K/layer_island_alone.png      700w
+          "
+        />
       </div>
       <!-- Forest -->
       <div class="keyart_layer" id="keyart-4" data-speed="100"></div>
@@ -98,8 +116,8 @@
             <div class="slogan-box">
               <div class="slogan-flex">
                 <h2 class="slogan-central slogan-0">Immersive</h2>
-                <h2 class="slogan-central slogan-1">Dwelling</h2>
-                <h2 class="slogan-central slogan-2">Shared</h2>
+                <h2 class="slogan-central slogan-1">Shared</h2>
+                <h2 class="slogan-central slogan-2">Dwelling</h2>
               </div>
             </div>
             <h3 class="slogan-bottom">Adventure</h3>
@@ -127,15 +145,6 @@
                   <strong>visuals</strong> and videos to a separate display.
                 </p>
                 <p class="caroussel-description-text page-1">
-                  It also integrates the <strong>SRD</strong> of the fifth
-                  edition and provides specific features for this system such as
-                  <strong>quick rules access</strong>,
-                  <strong>reference cards</strong> for spells and items, and an
-                  <strong>initiative tracker</strong>. Other features will be
-                  added along the way such as monsters’ hit points tracker, a
-                  markdown notepad for the gamemaster and much more !
-                </p>
-                <p class="caroussel-description-text page-2">
                   Once upon a time, there was a group of
                   <strong>four nerdy-ass engineers</strong> that shared the same
                   passion for roleplaying games as for programming. One day,
@@ -150,6 +159,15 @@
                   upon the task of creating a <strong>tool</strong> that would
                   help gamemasters to reach a top-notch
                   <strong>immersion</strong>. There was created The Tales Guild.
+                </p>
+                <p class="caroussel-description-text page-2">
+                  It also integrates the <strong>SRD</strong> of the fifth
+                  edition and provides specific features for this system such as
+                  <strong>quick rules access</strong>,
+                  <strong>reference cards</strong> for spells and items, and an
+                  <strong>initiative tracker</strong>. Other features will be
+                  added along the way such as monsters’ hit points tracker, a
+                  markdown notepad for the gamemaster and much more!
                 </p>
               </div>
             </div>
@@ -292,46 +310,78 @@
           <section class="support-section">
             <h3>We need your help</h3>
             <div class="support-description-container">
-              <!--TODO: Add correct links x2-->
               <p>
-                And now, we need your help to make this project happen ! In
-                order to fully grasp the needs of gamemasters and players from
-                all around the world, we would love to hear from your own
+                And now, we need your help to make this project happen! In order
+                to fully grasp the needs of gamemasters and players from all
+                around the world, we would love to hear from your own
                 experience. If you want to support us, please consider taking
                 5min of your time to answer
-                <a href="">this survey</a>.
+                <a href="http://survey.thetalesguild.com" target="_blank"
+                  >this survey</a
+                >.
               </p>
               <p>
-                You can also join <a href="">our Discord server</a> to keep up
-                with the development of the software and interact directly with
-                the team!
+                You can also join
+                <a href="http://discord.thetalesguild.com" target="_blank"
+                  >our Discord server</a
+                >
+                to keep up with the development of the software and interact
+                directly with the team!
               </p>
               <p>
                 We thank you ever so much for your interest in the project. May
-                the dice be with you !
+                the dice be with you!
               </p>
               <img src="./assets/img/logos/signature-en.png" alt="Signature" />
             </div>
             <div class="support-buttons-container">
-              <a href="">Survey</a>
-              <a class="discord close" href="">Join</a>
+              <a href="http://survey.thetalesguild.com" target="_blank"
+                >Survey</a
+              >
+              <a
+                class="discord close"
+                href="http://discord.thetalesguild.com"
+                target="_blank"
+                >Join</a
+              >
             </div>
           </section>
         </div>
       </aside>
+      <section class="preview-section">
+        <div class="preview-title">
+          <h2>Everything</h2>
+          <h3>at your fingertips</h3>
+        </div>
+        <div class="preview-visuals">
+          <div class="clickable-zone" id="clickable-zone-preview"></div>
+          <div class="click-here">
+            <img src="./assets/img/preview/click-here.png" alt="Click Here !" />
+          </div>
+          <div class="preview-image">
+            <img
+              src="./assets/img/preview/mini_preview-mockup.png"
+              srcset="
+                ./assets/img/preview/mini_preview-mockup.png 1500w,
+                ./assets/img/preview/preview-mockup.png      4173w
+              "
+              alt="TaleSmith Preview Mockup"
+            />
+          </div>
+        </div>
+      </section>
       <footer>
         <div class="footer-container">
           <div class="footer-logo-container">
             <h5>TaleSmith</h5>
             <h6>by The Tales Guild</h6>
           </div>
-          <!--TODO: Add all links-->
           <div class="socials-container">
             <div class="socials-mail">
               <a class="mail" href="mailto:contact@thetalesguild.com"></a>
               <p>contact@thetalesguild.com</p>
             </div>
-            <a class="discord" href=""></a>
+            <a class="discord" href="http://discord.thetalesguild.com"></a>
             <a
               class="instagram"
               href="https://www.instagram.com/thetalesguild/"
@@ -343,11 +393,28 @@
           </div>
           <div class="copyright-container">
             <p>
-              TaleSmith © Copyright 2022, The Tales Guild. All rights reserved.
+              <span>TaleSmith © Copyright 2022, The Tales Guild.&nbsp;</span
+              ><span>All rights reserved.</span>
             </p>
           </div>
         </div>
       </footer>
+    </div>
+    <!-- The Modal -->
+    <div id="preview-modal" class="modal">
+      <!-- The Close Button -->
+      <span class="close-cross">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img
+        class="modal-content"
+        id="talesmith-preview-image"
+        src="./assets/img/preview/TaleSmith-Preview.png"
+        alt="TaleSmith Preview"
+      />
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption">TaleSmith Preview <i>(proof of concept)</i></div>
     </div>
     <!-- TODO: Add email capture form -->
     <script

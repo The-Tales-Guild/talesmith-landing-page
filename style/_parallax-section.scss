@@ -192,23 +192,56 @@
 
   //Sky
   #keyart-0 {
-    background-image: url($baseurl + "assets/img/layers/layer_sky.png");
     background-color: #15151d;
+
+    @include media("<=2K") {
+      background-image: url($baseurl + "assets/img/layers/desktop/layer_sky.png");
+    }
+
+    @include media(">2K", "<=4K") {
+      background-image: url($baseurl + "assets/img/layers/2K/layer_sky.png");
+    }
+
+    @include media(">4K") {
+      background-image: url($baseurl + "assets/img/layers/4K/layer_sky.png");
+    }
   }
 
   //Lake
   #keyart-1 {
-    background-image: url($baseurl + "assets/img/layers/layer_lake.png");
     background-position: bottom center;
+
+    @include media("<=2K") {
+      background-image: url($baseurl + "assets/img/layers/desktop/layer_lake.png");
+    }
+
+    @include media(">2K", "<=4K") {
+      background-image: url($baseurl + "assets/img/layers/2K/layer_lake.png");
+    }
+
+    @include media(">4K") {
+      background-image: url($baseurl + "assets/img/layers/4K/layer_lake.png");
+    }
   }
 
   //Clouds
   #keyart-2 {
-    background-image: url($baseurl + "assets/img/layers/layer_cloud.png");
     background-size: 90%;
     background-repeat: repeat-x;
     background-position: 0% 0%;
     animation: move_cloud 60s linear alternate infinite;
+
+    @include media("<=2K") {
+      background-image: url($baseurl + "assets/img/layers/desktop/layer_cloud.png");
+    }
+
+    @include media(">2K", "<=4K") {
+      background-image: url($baseurl + "assets/img/layers/2K/layer_cloud.png");
+    }
+
+    @include media(">4K") {
+      background-image: url($baseurl + "assets/img/layers/4K/layer_cloud.png");
+    }
   }
 
   //Island
@@ -225,8 +258,19 @@
 
   //Trees
   #keyart-4 {
-    background-image: url($baseurl + "assets/img/layers/layer_tree.png");
     background-position: bottom center;
+
+    @include media("<=2K") {
+      background-image: url($baseurl + "assets/img/layers/desktop/layer_tree.png");
+    }
+
+    @include media(">2K", "<=4K") {
+      background-image: url($baseurl + "assets/img/layers/2K/layer_tree.png");
+    }
+
+    @include media(">4K") {
+      background-image: url($baseurl + "assets/img/layers/4K/layer_tree.png");
+    }
   }
 }
 
